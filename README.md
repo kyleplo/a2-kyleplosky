@@ -14,12 +14,12 @@ This project demonstrates a very simple polling web application, asking the sill
 ### Design/Evaluation Achievements
 - **User Testing**: 
     - Tester 1
-        - Last name:
-        - Problems:
-        - Comments:
-        - Changes:
+        - Last name: Walters
+        - Problems: Thought the space between the two sentences in the header was too small
+        - Comments: Liked it, thought there might be a secret button somewhere
+        - Changes: Somehow make the space bigger, suggested make clicking the buttons again clear the vote
     - Tester 2
-        - Last name:
-        - Problems:
-        - Comments:
-        - Changes:
+        - Last name: dos Santos
+        - Problems: None
+        - Comments: Noticed that the buttons get slightly bigger when the checkmarks appear, tried to break it by clicking the space the button would expand into but didn't have any issue
+        - Changes: Also suggested making clicking the buttons again clear the vote
