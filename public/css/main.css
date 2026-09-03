@@ -1,4 +1,104 @@
 body {
-  background:black;
-  color:white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 1fr;
+  color: white;
+  height: 100vh;
+  box-sizing: border-box;
+  text-align: center;
+
+  @media (width < 800px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr 1fr
+  }
+}
+
+* {
+  box-sizing: inherit;
+}
+
+header {
+  background-color: black;
+  grid-row: 1;
+  grid-column: 1 / 3;
+  padding: 15px;
+}
+
+h1 {
+  margin: 0.5em 0;
+}
+
+h1, .count {
+  font-family: 'Rubik Dirt', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+section {
+  grid-row: 2;
+}
+
+.honey {
+  background-color: #9e781c;
+  grid-column: 1;
+}
+
+.dirt {
+  background-color: #5a3f27;
+  grid-column: 2;
+
+  @media (width < 800px) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+.count {
+  font-size: 4em;
+  margin: 0.5em;
+
+  @media (width < 800px) {
+    margin: 0.25em;
+    font-size: 3em;
+  }
+}
+
+button {
+  border: none;
+  color: inherit;
+  font: inherit;
+  background-color: #ffffff66;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em;
+  background-color: #ffffff22;
+  max-height: 5em;
+  overflow-y: scroll;
+}
+
+#clearForm {
+  display: none;
+}
+
+.voted-dirt #clearForm, .voted-honey #clearForm {
+  display: block;
+}
+
+.voted-honey .honey button, .voted-dirt .dirt button {
+  pointer-events: none;
+  opacity: 0.5;
+
+  &::before {
+    content: "✓";
+  }
 }
