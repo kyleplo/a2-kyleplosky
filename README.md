@@ -1,9 +1,9 @@
 ## The Honey-Dirt Question
-This project demonstrates a very simple polling web application, asking the silly hypothetical question, would you rather the train you are driving suddenly become filled with honey or dirt? Users can vote on which they prefer and see what others voted for. The application keeps track of a user ID in the browser's local storage to prevent users from voting multiple times (yes I know clearing browsing data will circumvent this). I used CSS grid to lay out the page and added a media query to change the layout to suit narrower screens.
+This project demonstrates a very simple polling web application, asking the silly hypothetical question, would you rather the train you are driving suddenly become filled with honey or dirt? Users can vote on which they prefer and see what others voted for. The application keeps track of a user ID in the browser's local storage to prevent users from voting multiple times (yes I know clearing browsing data will circumvent this). I used a combination of both CSS grid and flexbox to lay out the page and added a media query to change the layout to suit narrower screens.
 
 - Server - Tracks the vote option, associated user ID, and the timestamp of the vote.
 - Results - Timestamps of votes are displayed below each option.
-- Forms - Three separate forms: one for each option and one to clear. Forms consist of a submit button as well as hidden fields containing the user ID and vote option.
+- Forms - Two forms: one for each option. Forms consist of a submit button as well as hidden fields containing the user ID and vote option.
 - Server Logic - Overrides user's existing vote if it already exists. Adds timestamp.
 - Derived Field - Counts the number of votes for each option.
 
@@ -25,3 +25,4 @@ Render Link: https://a2-kyleplosky.onrender.com/
         - Problems: None
         - Comments: Noticed that the buttons get slightly bigger when the checkmarks appear, tried to break it by clicking the space the button would expand into but didn't have any issue
         - Changes: Also suggested making clicking the buttons again clear the vote
+    - I ended up implementing both of these suggestions
