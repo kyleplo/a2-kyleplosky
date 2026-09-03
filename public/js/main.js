@@ -11,7 +11,8 @@ window.addEventListener("load", async () => {
     form.addEventListener("submit", async e => {
       e.preventDefault();
 
-      localStorage.vote = form.elements["vote"].value;
+      const vote = localStorage.vote === form.elements["vote"].value ? "clear" : form.elements["vote"].value;
+      localStorage.vote = vote;
       const data = await fetch("/api", {
         method: "POST",
         headers: {
@@ -19,7 +20,7 @@ window.addEventListener("load", async () => {
         },
         body: JSON.stringify({
           id: form.elements["id"].value,
-          vote: form.elements["vote"].value
+          vote: vote
         })
       }).then(r => r.json());
     displayData(data);

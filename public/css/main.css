@@ -3,7 +3,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: 150px 1fr;
   color: white;
   height: 100vh;
   box-sizing: border-box;
@@ -11,7 +11,7 @@ body {
 
   @media (width < 800px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 200px 1fr 1fr
+    grid-template-rows: 150px 1fr 1fr
   }
 }
 
@@ -86,18 +86,7 @@ ul {
   overflow-y: scroll;
 }
 
-#clearForm {
-  display: none;
-}
-
-.voted-dirt #clearForm, .voted-honey #clearForm {
-  display: block;
-}
-
 .voted-honey .honey button, .voted-dirt .dirt button {
-  pointer-events: none;
-  opacity: 0.5;
-
   &::before {
     content: "✓";
   }
